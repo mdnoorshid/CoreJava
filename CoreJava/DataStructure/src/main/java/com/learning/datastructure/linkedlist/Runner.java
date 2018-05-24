@@ -18,10 +18,12 @@ public class Runner {
         customLinkedList.insert(3);
         customLinkedList.insert(4);
         customLinkedList.insert(5);
+        customLinkedList.insert(6);
        // customLinkedList.insertAtStart(23);
         customLinkedList.insertAtAnyPoint(1,7);
        customLinkedList.deleteNode(5);
         customLinkedList.show();
+        customLinkedList.getMiddle();
 	}
 
 }

@@ -103,5 +103,43 @@ public class CustomLinkedList {
 		logger.info(n.data);
 
 	}//end of method
+	
+	/**
+	 * method to find middle at once pass
+	 */
+	public void getMiddle(){
+		/*Node slow_ptr = head;
+		Node fast_ptr = head;
+		if(head != null){
+			while(fast_ptr != null && slow_ptr != null){
+				fast_ptr = fast_ptr.next.next;
+				slow_ptr = slow_ptr.next;
+			}
+        logger.info("Middle element is:: "+slow_ptr.getData());
+		}*/
+		
+		Node current = head;
+		int length = 0;
+		
+		Node middle = head;
+		
+		while(current.next != null){
+			length++;
+			if(length % 2 == 0){
+				middle = middle.next;
+			}
+			
+			current = current.next;
+			
+		}
+		
+		if(length %2 == 1){
+			middle = middle.next;
+		}
+		logger.debug("length of the list:: "+length+1);
+		logger.info("middle element of the linkedlist:: "+middle.data);
+		
+		
+	}
 
 }

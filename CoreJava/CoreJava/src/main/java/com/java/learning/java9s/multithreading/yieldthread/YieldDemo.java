@@ -9,6 +9,8 @@ public class YieldDemo {
 	static Logger logger = Logger.getLogger(YieldDemo.class);
 public static void main(String[] args) throws InterruptedException {
 
+	Object obj = new Object();
+	obj.equals(obj);
 	
 	YieldRunnable yieldRunnable = new YieldRunnable();
 	ThreadGroup threadGroup = new ThreadGroup("All threads");
