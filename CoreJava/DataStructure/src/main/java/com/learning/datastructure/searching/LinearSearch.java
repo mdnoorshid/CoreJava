@@ -29,34 +29,19 @@ public boolean linearSearching(int[] arr, int key){
 	return found;
 }
 
-/*public static void main(String[] args) {
-	LinearSearch linearSearch = new LinearSearch();
-	int myArr[] = new int[]{
-		1,2,4,5,7,8
-	};
-	
-	boolean result = linearSearch.linearSearching(myArr, 5);
-	System.out.println(result);
-	
-	Thread t = new Thread(() ->{
-		for(int i = 0 ;i<100;i++){
-			System.out.println(i);
-		}
-	});
-	t.start();
-	
-	
-}*/
 
 
 public static void main(String[] args) {
-	List<Integer> list =  Arrays.asList(1,8,5,77,8,1,5,6);
+	/*List<Integer> list =  Arrays.asList(1,8,5,77,8,1,5,6);
 	List<Integer> sortedUniqueList = new ArrayList<>(new TreeSet<>(list));
-	System.out.println("sortedUniqueList:: "+sortedUniqueList);
-	list.stream().distinct().collect(Collectors.toList());
-	list.stream().collect(Collectors.toSet());
+	System.out.println("sortedUniqueList:: "+sortedUniqueList);*/
+	/*list.stream().distinct().collect(Collectors.toList());
+	list.stream().collect(Collectors.toSet());*/
 	
-	ArrayList arrayList = new ArrayList<>(new HashSet(list));
+	LinearSearch linearSearch = new LinearSearch();
+	boolean linearSearching = linearSearch.linearSearching(new int[]{4,3,5,7,8,9}, 6);
+	System.out.println(linearSearching);
+	
     
 
 }

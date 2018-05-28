@@ -206,6 +206,8 @@ public class Miscellaneous {
 			}
 		}
 
+		Object obj = new Object();
+
 		Set<Entry<Character, Integer>> entrySet = hashMap.entrySet();
 		for (Entry<Character, Integer> entry : entrySet) {
 			if (entry.getValue() > 1) {
@@ -231,16 +233,67 @@ public class Miscellaneous {
 			}
 		}
 
-		System.out.println("Duplicate of words map:: "+hashMap);
-		
+		System.out.println("Duplicate of words map:: " + hashMap);
+
 		Set<Entry<String, Integer>> entrySet = hashMap.entrySet();
 		for (Entry<String, Integer> entry : entrySet) {
 			if (entry.getValue() > 1) {
 				System.out.println(entry.getKey() + " is duplicate and occurs " + entry.getValue());
 			}
 		}
-
 	}
+
+	/**
+	 * Method to check the number is armstrong
+	 * 153 = 1^3 + 5^3 + 3 ^3
+	 * @param num
+	 * @return
+	 */
+	public boolean isArmstrongNumber(int num) {
+		int last = 0;
+		int totalCalc=0;
+		boolean isArmstrong= false;
+		int temp = num;
+		while(num > 0){
+		  last = num % 10;
+		  last = last*last*last;
+		  System.out.println("last:: "+last);
+		  num = num/10;
+		  System.out.println("num:: "+num);
+		  totalCalc+= last;
+		  System.out.println("totalCalc:: "+totalCalc);
+		}
+		
+		if(totalCalc == temp){
+			isArmstrong = true;
+		}
+		return isArmstrong;
+	}
+	
+	/**
+	 * Method to find the longest increasing subsequence array
+	 * @param array
+	 * @return
+	 */
+	public int[] longestIncreasingSubsequenceArray(int[] array){
+		int count = 0;
+        for(int i = 0 ; i<array.length ; i++){
+        	if((array[i] < array[i+1]) && i!= array.length-1){
+        		count ++ ;
+        	}
+        }
+		System.out.println(count);
+		
+		
+		
+		return array;
+	}
+	
+	
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 		Miscellaneous miscellaneous = new Miscellaneous();
@@ -267,16 +320,23 @@ public class Miscellaneous {
 		 * miscellaneous.findFactorialUsingRecursion(5);
 		 * System.out.println(findFactorialUsingRecursion);
 		 */
-		String str = "noorshid";
-		String upperCase = str.toUpperCase();
-		System.out.println("str " + upperCase);
-		System.out.println();
-		System.out.println(miscellaneous.reverseString("Noorshid"));
-		int occuranceOfCharacter = miscellaneous.occuranceOfCharacter('m', "programmer");
-		System.out.println("occurance of character:: " + occuranceOfCharacter);
-		miscellaneous.getDuplicatesOfCharacters("programmer");
-		miscellaneous.getDuplicatesOfWord("java is my life , and i love java , do you love java");
-
+		/*
+		 * String str = "noorshid"; String upperCase = str.toUpperCase();
+		 * System.out.println("str " + upperCase); System.out.println();
+		 * System.out.println(miscellaneous.reverseString("Noorshid")); int
+		 * occuranceOfCharacter = miscellaneous.occuranceOfCharacter('m',
+		 * "programmer"); System.out.println("occurance of character:: " +
+		 * occuranceOfCharacter);
+		 * miscellaneous.getDuplicatesOfCharacters("programmer"); miscellaneous.
+		 * getDuplicatesOfWord("java is my life , and i love java , do you love java"
+		 * );
+		 */
+		/*boolean armstrongNumber = miscellaneous.isArmstrongNumber(371);
+         System.out.println(armstrongNumber);*/
+		
+		miscellaneous.longestIncreasingSubsequenceArray(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
+		
+		
 	}
 
 }

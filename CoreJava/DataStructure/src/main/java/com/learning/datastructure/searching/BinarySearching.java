@@ -9,8 +9,8 @@ import java.util.List;
   Mid= low + (high-low)/2*/
 
 /* Worst case Performance  O(logn)
- * Best case Peerformance O(1)
- * Average case Performance O(logn)
+ * Best case Performance O(1)
+ * Average case Performance O(9)
  * Worst Case Space Complexity O(1)
  * 
  * */ 
@@ -18,59 +18,35 @@ import java.util.List;
 public class BinarySearching {
 
 	
-	public boolean doBinarySearch(int[] arr,int keynum){
-	   int num = arr.length;
-	    int low, mid, high;  
-	    boolean found = false;
-	  
-	    
-	    bubbleSort(arr);
-	    System.out.println("--------Sorted Array-----");
-	    
-	    for(int k = 0 ; k < arr.length ; k++){
-	    	System.out.print(arr[k]+" ");
-	    }
-	  //  System.out.println();
-	    /*  Binary searching begins */  
-	    low = 1;
-	    high = num;
-	    
-	    do{
-	    	mid = (low+high)/2;
-	    }while(keynum != arr[mid] && low <=high);{
-	    	if(keynum == arr[mid]){
-	    		System.out.println("Search Successfully!!");
-	    		found = true;
-	    	}else{
-	    		System.out.println("Search failed!!");
-	    	}
-	    }
-		return found;
+	public String doBinarySearch(int[] arr,int keynum){
+		//need to implement sorting algorithm here
+	   int n = arr.length;
+	   int start = 0;
+	   int end = n-1 ;
+	   int mid = 0;
+
+	   
+	   while(start <= end){
+		   mid =(start+end)/2;
+		   if(arr[mid] == keynum){
+			   return "Elements found at  index "+mid;
+		   }else if(keynum < arr[mid]){
+			   end = mid-1;
+		   }else if(keynum > arr[mid]){
+			   start = mid+1;
+		   }
+	   }
+	return "Element doesnot exist";
 	}
 	
-	public int[] bubbleSort(int[]arr){
-		  /*  Bubble sorting begins */  
-		int temp,i,j;
-		int num = arr.length;
-	    for( i = 0; i<num; i++){
-	      for( j = 0 ; j <num ; j++){
-	    	  
-	    	  if(arr[j] > arr[j+1]){
-	    		  temp = arr[j];
-	    		  arr[j] = arr[j + 1];
-	    		  arr[j+1] = temp;
-	    	  }
-	    	  
-	      }
-	    }
-		return arr;
-		
-	}
+	
 	
 	public static void main(String[] args) {
 		BinarySearching binarySearching = new BinarySearching();
-		boolean doBinarySearchResult = binarySearching.doBinarySearch(new int[]{1,2,5,6,7,3,4},1);
-		System.out.println(doBinarySearchResult);
+		String doBinarySearch = binarySearching.doBinarySearch(new int[]{1, 2,4,6,7,8,9},8);
+		System.out.println(doBinarySearch);
+
+	
 	}
 	
 }
