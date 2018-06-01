@@ -8,9 +8,9 @@ import java.util.List;
  *Array is divided into two half by finding the middle element using formula:
   Mid= low + (high-low)/2*/
 
-/* Worst case Performance  O(logn)
+/* Worst case Performance  O(log n)
  * Best case Performance O(1)
- * Average case Performance O(9)
+ * Average case Performance O(log n)
  * Worst Case Space Complexity O(1)
  * 
  * */ 
@@ -43,7 +43,7 @@ public class BinarySearching {
 	
 	public static void main(String[] args) {
 		BinarySearching binarySearching = new BinarySearching();
-		String doBinarySearch = binarySearching.doBinarySearch(new int[]{1, 2,4,6,7,8,9},8);
+		String doBinarySearch = binarySearching.doBinarySearch(new int[]{1, 2,4,6,7,8,9},5);
 		System.out.println(doBinarySearch);
 
 	
