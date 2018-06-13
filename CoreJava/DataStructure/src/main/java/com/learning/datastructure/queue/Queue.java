@@ -2,6 +2,22 @@ package com.learning.datastructure.queue;
 
 import org.apache.log4j.Logger;
 
+/*Queue is also an abstract data type or a linear data structure, just like stack data structure, in which the first element is inserted 
+from one end called the REAR(also called tail), and the removal of existing element takes place from the other end called as FRONT(also called head).
+This makes queue as FIFO(First in First Out) data structure, which means that element inserted first will be removed first.
+Which is exactly how queue system works in real world. If you go to a ticket counter to buy movie tickets, and are first in the queue, 
+then you will be the first one to get the tickets. Right? Same is the case with Queue data structure. 
+Data inserted first, will leave the queue first.
+The process to add an element into queue is called Enqueue and the process of removal of an element from queue is called Dequeue.
+
+**Basic features of Queue
+1.Like stack, queue is also an ordered list of elements of similar data types.
+2.Queue is a FIFO( First in First Out ) structure.
+3.Once a new element is inserted into the Queue, all the elements inserted before the new element in the queue must be removed, to remove the new element.
+4.peek( ) function is oftenly used to return the value of first element without dequeuing it.
+*
+*/
+
 public class Queue {
 	static Logger logger = Logger.getLogger(Queue.class);
 	int[] queue = new int[5];

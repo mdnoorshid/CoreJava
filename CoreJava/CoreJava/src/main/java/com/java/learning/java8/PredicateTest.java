@@ -13,7 +13,7 @@ public class PredicateTest {
 	
 	public static void main(String[] args) {
 		//Using anonymous class
-	  /* Predicate<Integer> predicateTest = new Predicate<Integer>() {
+	   Predicate<Integer> predicateTest = new Predicate<Integer>() {
 
 		@Override
 		public boolean test(Integer t) {
@@ -23,17 +23,17 @@ public class PredicateTest {
 				return false;
 		}
 	};
-	System.out.println(predicateTest.test(45));*/
+	System.out.println(predicateTest.test(45));
 		
 		//Using lambda expression
 		
-	/*	Predicate<Integer> predicateTest2 = (age) -> {
+		Predicate<Integer> predicateTest2 = (age) -> {
 			if (age > 18)
 				return true;
 			else
 				return false;
 		};
-		System.out.println(predicateTest2.test(15));*/
+		System.out.println(predicateTest2.test(15));
 		
 		//Using method reference
 		Predicate<Integer> predicateTest3 = PredicateTest::isValid;

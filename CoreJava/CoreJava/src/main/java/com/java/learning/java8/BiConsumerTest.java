@@ -13,7 +13,7 @@ public class BiConsumerTest {
 	public static void main(String[] args) {
 		
 		//Using anonymous class
-		 BiConsumer<String,Integer> biconTest3 = new BiConsumer<String, Integer>() {
+		/* BiConsumer<String,Integer> biconTest3 = new BiConsumer<String, Integer>() {
 
 			@Override
 			public void accept(String t, Integer u) {
@@ -21,15 +21,15 @@ public class BiConsumerTest {
 			}
 		};
 		
-		biconTest3.accept("Md Noorshid",26);
+		biconTest3.accept("Md Noorshid",26);*/
 		
 		//Using lambda
-	/*	BiConsumer<String,Integer> biconTest2 = (n,a) -> System.out.println("Happy birthday: "+n+" , u have turned into "+a);
+		BiConsumer<String,Integer> biconTest2 = (n,a) -> System.out.println("Happy birthday: "+n+" , u have turned into "+a);
 		
-		biconTest2.accept("Md Noorshid", 26);*/
+		biconTest2.accept("Md Noorshid", 26);
 		
 		//Using Method Reference
-          /* BiConsumer<String,Integer> biconTest1 = BiConsumerTest::wishBirthday;
-           biconTest1.accept("Md Noorshid",26);*/
+           BiConsumer<String,Integer> biconTest1 = BiConsumerTest::wishBirthday;
+           biconTest1.accept("Md Noorshid",26);
 	}
 }
