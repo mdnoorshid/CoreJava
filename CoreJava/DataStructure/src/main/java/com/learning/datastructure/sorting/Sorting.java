@@ -17,6 +17,8 @@ public class Sorting {
 	 * until no input elements remain. The choice of which element to remove
 	 * from the input is arbitrary, and can be made using almost any choice
 	 * algorithm.
+	 * **Take key value and start comparing to its left, if it is lower than its left adjacent 
+	 * number then swipe it.
 	 * Time Complexity : O(n^2)
 	 */
 	public int[] insertionSorting(int[] arr) {

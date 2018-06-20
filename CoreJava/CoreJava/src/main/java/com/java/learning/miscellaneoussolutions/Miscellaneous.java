@@ -187,7 +187,15 @@ public class Miscellaneous {
 	 * @param targetString
 	 */
 	public void occuranceofWord(String targetWord, String targetString) {
-
+		String[] targetStringArr = targetString.split("\\s");
+		int count = 0;
+        for(int i = 0 ; i < targetStringArr.length ; i++){
+        	if(targetStringArr[i].equals(targetWord)){
+        		count++;
+        	}
+        }
+		
+		System.out.print(targetWord+" occured "+count+" times.");
 	}
 
 	/**
@@ -334,7 +342,8 @@ public class Miscellaneous {
 		/*boolean armstrongNumber = miscellaneous.isArmstrongNumber(371);
          System.out.println(armstrongNumber);*/
 		
-		miscellaneous.longestIncreasingSubsequenceArray(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
+		//miscellaneous.longestIncreasingSubsequenceArray(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
+		miscellaneous.occuranceofWord("java","my life is ");
 		
 		
 	}
