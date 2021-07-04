@@ -1,7 +1,5 @@
 package com.java.learning.miscellaneoussolutions;
 
-import java.time.format.ResolverStyle;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -253,7 +251,7 @@ public class Miscellaneous {
 
 	/**
 	 * Method to check the number is armstrong
-	 * 153 = 1^3 + 5^3 + 3 ^3
+	 * 371 = 3^3 + 7^3 + 1 ^3
 	 * @param num
 	 * @return
 	 */
@@ -291,9 +289,6 @@ public class Miscellaneous {
         	}
         }
 		System.out.println(count);
-		
-		
-		
 		return array;
 	}
 	
@@ -342,8 +337,8 @@ public class Miscellaneous {
 		/*boolean armstrongNumber = miscellaneous.isArmstrongNumber(371);
          System.out.println(armstrongNumber);*/
 		
-		//miscellaneous.longestIncreasingSubsequenceArray(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
-		miscellaneous.occuranceofWord("java","my life is ");
+	miscellaneous.longestIncreasingSubsequenceArray(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
+		//miscellaneous.occuranceofWord("java","my life is ");
 		
 		
 	}

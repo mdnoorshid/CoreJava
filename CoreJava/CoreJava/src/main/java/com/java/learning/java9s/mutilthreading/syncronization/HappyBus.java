@@ -1,10 +1,12 @@
 package com.java.learning.java9s.mutilthreading.syncronization;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 public class HappyBus {
 
 	public static void main(String[] args) {
+		BasicConfigurator.configure();
 		BusReservation br = new BusReservation();
 		
 		PassengerThread pt1 = new PassengerThread(2,br, "noorshid");

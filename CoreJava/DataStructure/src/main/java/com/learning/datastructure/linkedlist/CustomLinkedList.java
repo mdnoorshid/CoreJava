@@ -18,7 +18,7 @@ public class CustomLinkedList {
 	 * 
 	 * @param data : Data to be insert
 	 */
-	public void insert(int data) {
+	public void insertAtLast(int data) {
 		Node node = new Node(); // Defining Object Of Node Class
 		node.data = data; // initializing the data from the end user to node
 							// object

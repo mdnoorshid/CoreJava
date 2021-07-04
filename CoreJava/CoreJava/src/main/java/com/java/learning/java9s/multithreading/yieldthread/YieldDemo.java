@@ -3,12 +3,14 @@ package com.java.learning.java9s.multithreading.yieldthread;
 import java.lang.Thread.State;
 import java.security.AllPermission;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 public class YieldDemo {
 	static Logger logger = Logger.getLogger(YieldDemo.class);
 public static void main(String[] args) throws InterruptedException {
 
+	BasicConfigurator.configure();
 	Object obj = new Object();
 	obj.equals(obj);
 	

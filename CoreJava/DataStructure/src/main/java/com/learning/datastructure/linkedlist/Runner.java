@@ -13,12 +13,12 @@ public class Runner {
 		BasicConfigurator.configure();
 		
 		CustomLinkedList customLinkedList = new CustomLinkedList();
-        customLinkedList.insert(1);
-        customLinkedList.insert(2);
-        customLinkedList.insert(3);
-        customLinkedList.insert(4);
-        customLinkedList.insert(5);
-        customLinkedList.insert(6);
+        customLinkedList.insertAtLast(1);
+        customLinkedList.insertAtLast(2);
+        customLinkedList.insertAtLast(3);
+        customLinkedList.insertAtLast(4);
+        customLinkedList.insertAtLast(5);
+        customLinkedList.insertAtLast(6);
        // customLinkedList.insertAtStart(23);
         customLinkedList.insertAtAnyPoint(1,7);
      //  customLinkedList.deleteNode(5);
