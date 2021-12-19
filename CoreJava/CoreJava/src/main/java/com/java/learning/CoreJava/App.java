@@ -2,7 +2,6 @@ package com.java.learning.CoreJava;
 
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
 
 import com.java.learning.CoreJava.model.Employee;
 import com.java.learning.CoreJava.serialization.SerializationHandler;
@@ -13,7 +12,6 @@ import com.java.learning.CoreJava.serialization.SerializationHandler;
  */
 public class App 
 {
-	static Logger logger = Logger.getLogger(App.class);
     public static void main( String[] args ) throws IOException
     {
      /*Employee emp1 = new Employee(1,"Md Noorshid","Software Developer",2);
@@ -26,7 +24,6 @@ public class App
      serializationHandler.serializeObject(emp3, "C:\\Users\\mdnoo\\Desktop\\test\\serializationDemo.ser");*/
      
      Employee emp = (Employee) serializationHandler.deSerializeObject("C:\\Users\\mdnoo\\Desktop\\test\\serializationDemo.ser");
-     logger.debug(emp);
-     
+    System.out.println(emp);
     }
 }
