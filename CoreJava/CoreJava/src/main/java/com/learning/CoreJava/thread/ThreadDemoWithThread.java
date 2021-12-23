@@ -1,6 +1,5 @@
 package com.learning.CoreJava.thread;
 
-import org.apache.log4j.Logger;
 
 public class ThreadDemoWithThread{
 public static void main(String[] args) {
@@ -21,11 +20,10 @@ public static void main(String[] args) {
  *
  */
 class ThreadDemo extends Thread{
-	static Logger logger = Logger.getLogger(ThreadDemo.class);
 @Override
 public void run() {
 for(int i = 0;i<10; i++){
-logger.debug(Thread.currentThread().getName()+" Value:: "+i);	
+//logger.debug(Thread.currentThread().getName()+" Value:: "+i);
 }
 }
 }

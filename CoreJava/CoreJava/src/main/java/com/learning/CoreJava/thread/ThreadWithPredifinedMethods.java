@@ -1,9 +1,7 @@
 package com.learning.CoreJava.thread;
 
-import org.apache.log4j.Logger;
 
 public class ThreadWithPredifinedMethods {
-static Logger logger = Logger.getLogger(ThreadWithPredifinedMethods.class);
 public static int count;
 public static synchronized void incCount(){
 	count++;
@@ -37,7 +35,7 @@ public static void main(String[] args) {
 	//Using lambda(Java 8)
 	Thread t3 = new Thread(() -> {
 	     for(int i =0 ; i<10 ;i++){
-	    	 logger.debug("i--> "+i);
+//	    	 logger.debug("i--> "+i);
 	     }
 	} );
 	
@@ -56,9 +54,6 @@ public static void main(String[] args) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	
-	
-	
-	logger.debug("count:: "+count);
+
 }
 }

@@ -1,6 +1,5 @@
 package com.learning.datastructure.linkedlist;
 
-import org.apache.log4j.Logger;
 
 /**
  * Custom LinkedList Class
@@ -9,7 +8,6 @@ import org.apache.log4j.Logger;
  */
 public class CustomLinkedList {
 
-	static Logger logger = Logger.getLogger(CustomLinkedList.class);
 
 	Node head;
 
@@ -97,10 +95,10 @@ public class CustomLinkedList {
 
 		Node n = head;
 		while (n.next != null) {
-			logger.info(n.data);
+			//logger.info(n.data);
 			n = n.next;
 		}
-		logger.info(n.data);
+		//logger.info(n.data);
 
 	}//end of method
 	
@@ -136,8 +134,8 @@ public class CustomLinkedList {
 		if(length %2 == 1){
 			middle = middle.next;
 		}
-		logger.debug("length of the list:: "+length+1);
-		logger.info("middle element of the linkedlist:: "+middle.data);
+		//logger.debug("length of the list:: "+length+1);
+		//logger.info("middle element of the linkedlist:: "+middle.data);
 		
 		
 	}

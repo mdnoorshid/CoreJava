@@ -1,10 +1,8 @@
 package com.learning.datastructure.queue;
 
-import org.apache.log4j.BasicConfigurator;
 
 public class Runner {
 public static void main(String[] args) {
-	BasicConfigurator.configure();
 	Queue queue = new Queue();
 	queue.enQueue(1);
 	queue.enQueue(2);

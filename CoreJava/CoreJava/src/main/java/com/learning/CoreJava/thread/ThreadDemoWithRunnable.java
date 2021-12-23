@@ -1,6 +1,5 @@
 package com.learning.CoreJava.thread;
 
-import org.apache.log4j.Logger;
 
 public class ThreadDemoWithRunnable {
 	public static void main(String[] args) {
@@ -14,10 +13,10 @@ public class ThreadDemoWithRunnable {
 }
 
 class ThreadDemo1 implements Runnable {
-    static Logger logger = Logger.getLogger(ThreadWithPredifinedMethods.class);
+   // static Logger logger = Logger.getLogger(ThreadWithPredifinedMethods.class);
 	public void run() {
 		for (int i = 0; i < 10; i++) {
-            logger.debug(Thread.currentThread().getName() +" Value:: "+i);
+            //logger.debug(Thread.currentThread().getName() +" Value:: "+i);
 		}
 	}
 

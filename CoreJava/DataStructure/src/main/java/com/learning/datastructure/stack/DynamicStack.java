@@ -1,9 +1,7 @@
 package com.learning.datastructure.stack;
 
-import org.apache.log4j.Logger;
 
 public class DynamicStack {
-	static Logger logger = Logger.getLogger(Stack.class);
 	int capacity = 2;
 	int stack[] = new int[capacity];
 	int top;
@@ -32,7 +30,7 @@ public class DynamicStack {
 	 */
 	public void show() {
 		for (int n : stack) {
-			logger.info(n);
+			//logger.info(n);
 		}
 	}
 
@@ -42,7 +40,7 @@ public class DynamicStack {
 	public int pop() {
 		int data = 0;
 		if (isEmpty()) {
-			logger.error("====STACK IS EMPTY====");
+			//logger.error("====STACK IS EMPTY====");
 		} else {
 			top--;
 			data = stack[top];

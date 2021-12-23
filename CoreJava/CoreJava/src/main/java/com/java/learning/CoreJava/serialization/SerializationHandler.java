@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import org.apache.log4j.Logger;
 
 /**
  * Class to handle serialization and deserialization
@@ -19,8 +18,6 @@ import org.apache.log4j.Logger;
  *
  */
 public class SerializationHandler {
-
-	static Logger logger = Logger.getLogger(SerializationHandler.class);
 
 	/**
 	 * Method to serialize object
@@ -37,11 +34,11 @@ public class SerializationHandler {
 			fileOutputStream = new FileOutputStream(destinationPath);
 			objectOutputStream = new ObjectOutputStream(fileOutputStream);
 			objectOutputStream.writeObject(obj);
-			logger.info("Serialization completed....");
+			System.out.println("Serialization completed....");
 		} catch (FileNotFoundException e) {
-			logger.error(e.getMessage());
+			System.err.println(e.getMessage());
 		} catch (IOException e) {
-			logger.error(e.getMessage());
+			System.err.println(e.getMessage());
 		} finally {
 			try {
 				if (fileOutputStream != null) {
@@ -51,7 +48,7 @@ public class SerializationHandler {
 					objectOutputStream.close();
 				}
 			} catch (IOException e) {
-				logger.error(e.getMessage());
+				System.err.println(e.getMessage());
 			}
 		}
 
@@ -72,11 +69,11 @@ public class SerializationHandler {
 			objectInputStream = new ObjectInputStream(fileInputStream);
 			object = objectInputStream.readObject();
 		} catch (FileNotFoundException e) {
-			logger.error(e.getMessage());
+			System.err.println(e.getMessage());
 		} catch (IOException e) {
-			logger.error(e.getMessage());
+			System.err.println(e.getMessage());
 		} catch (ClassNotFoundException e) {
-			logger.error(e.getMessage());
+			System.err.println(e.getMessage());
 		} finally{
 			if(fileInputStream !=null){
 				fileInputStream.close();

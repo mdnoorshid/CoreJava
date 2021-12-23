@@ -138,7 +138,6 @@ public class Miscellaneous {
 	/**
 	 * Method to reverse the String
 	 * 
-	 * @param args
 	 */
 	public String reverseString(String str) {
 		char[] charArr = str.toCharArray();
@@ -291,13 +290,24 @@ public class Miscellaneous {
 		System.out.println(count);
 		return array;
 	}
+//n1 n2 n3
+//0 1 1 2 3 4...
+	public long fibnocciSeries(int num){
+		int num1 = 0;
+		int num2 = 1;
+		int num3 = 0;
+		long sum =0;
+	//	System.out.print(num1+" "+num2+" ");
+		for(int i = 1 ;i<=num;i++){
+			num3 = num1+num2;
+			sum+=num3;
+			//System.out.print(num3+" ");
+			num1=num2;
+			num2=num3;
+		}
+       return sum;
+	}
 	
-	
-	
-	
-	
-	
-
 	public static void main(String[] args) {
 		Miscellaneous miscellaneous = new Miscellaneous();
 		/*
@@ -337,9 +347,9 @@ public class Miscellaneous {
 		/*boolean armstrongNumber = miscellaneous.isArmstrongNumber(371);
          System.out.println(armstrongNumber);*/
 		
-	miscellaneous.longestIncreasingSubsequenceArray(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
+	//miscellaneous.longestIncreasingSubsequenceArray(new int[]{10, 9, 2, 5, 3, 7, 101, 18});
 		//miscellaneous.occuranceofWord("java","my life is ");
-		
+		System.out.println(miscellaneous.fibnocciSeries(50));
 		
 	}
 

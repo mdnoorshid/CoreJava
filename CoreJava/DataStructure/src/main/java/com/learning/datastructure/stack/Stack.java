@@ -1,9 +1,7 @@
 package com.learning.datastructure.stack;
 
-import org.apache.log4j.Logger;
 
 public class Stack {
-	static Logger logger = Logger.getLogger(Stack.class);
 	int stack[] = new int[6];
 	int top;
 
@@ -12,7 +10,7 @@ public class Stack {
 	 */
 	public void push(int data) {
 		if (top == stack.length) {
-			logger.error("====STACK IS FULL====");
+			//logger.error("====STACK IS FULL====");
 		} else {
 			stack[top] = data;
 			top++;
@@ -24,7 +22,7 @@ public class Stack {
 	 */
 	public void show() {
 		for (int n : stack) {
-			logger.info(n);
+			//logger.info(n);
 		}
 	}
 
@@ -34,7 +32,7 @@ public class Stack {
 	public int pop() {
 		int data = 0;
 		if (isEmpty()) {
-			logger.error("====STACK IS EMPTY====");
+			//logger.error("====STACK IS EMPTY====");
 		} else {
 			top--;
 			data = stack[top];

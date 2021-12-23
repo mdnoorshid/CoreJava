@@ -1,6 +1,5 @@
 package com.learning.datastructure.queue;
 
-import org.apache.log4j.Logger;
 
 /*Queue is also an abstract data type or a linear data structure, just like stack data structure, in which the first element is inserted 
 from one end called the REAR(also called tail), and the removal of existing element takes place from the other end called as FRONT(also called head).
@@ -19,7 +18,6 @@ The process to add an element into queue is called Enqueue and the process of re
 */
 
 public class Queue {
-	static Logger logger = Logger.getLogger(Queue.class);
 	int[] queue = new int[5];
 	int size;
 	int front;
@@ -36,7 +34,7 @@ public class Queue {
 			rear = (rear + 1) % 5;
 			size = size + 1;
 		} else {
-			logger.error(">>>>QUEUE IS FULL<<<<");
+			//logger.error(">>>>QUEUE IS FULL<<<<");
 		}
 	}
 
@@ -45,7 +43,7 @@ public class Queue {
 	 */
 	public void show() {
 		for (int i = 0; i < size; i++) {
-			logger.info(queue[(front + i) % 5]);
+			//logger.info(queue[(front + i) % 5]);
 		}
 	}
 
@@ -58,7 +56,7 @@ public class Queue {
 		front = (front + 1)%5;
 		size = size - 1 ;
 		}else{
-          logger.error(">>>QUEUE IS EMPTY<<<");			
+          //logger.error(">>>QUEUE IS EMPTY<<<");
 		}
 		return data;
 	}

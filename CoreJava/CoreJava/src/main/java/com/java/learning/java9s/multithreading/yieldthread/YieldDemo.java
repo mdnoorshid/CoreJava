@@ -3,14 +3,10 @@ package com.java.learning.java9s.multithreading.yieldthread;
 import java.lang.Thread.State;
 import java.security.AllPermission;
 
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
 
 public class YieldDemo {
-	static Logger logger = Logger.getLogger(YieldDemo.class);
 public static void main(String[] args) throws InterruptedException {
 
-	BasicConfigurator.configure();
 	Object obj = new Object();
 	obj.equals(obj);
 	
@@ -62,7 +58,7 @@ public static void main(String[] args) throws InterruptedException {
 		State t7State = t7.getState();
 		State t8State = t8.getState();
 		State t9State = t9.getState();
-		logger.debug(System.nanoTime()+" t1 Status: "+t1State);
+		/*logger.debug(System.nanoTime()+" t1 Status: "+t1State);
 		logger.debug(System.nanoTime()+" t2 Status: "+t2State);
 		logger.debug(System.nanoTime()+" t3 Status: "+t3State);
 		logger.debug(System.nanoTime()+" t4 Status: "+t4State);
@@ -70,7 +66,7 @@ public static void main(String[] args) throws InterruptedException {
 		logger.debug(System.nanoTime()+" t6 Status: "+t6State);
 		logger.debug(System.nanoTime()+" t7 Status: "+t7State);
 		logger.debug(System.nanoTime()+" t8 Status: "+t8State);
-		logger.debug(System.nanoTime()+" t9 Status: "+t9State);
+		logger.debug(System.nanoTime()+" t9 Status: "+t9State);*/
 		
 		int activeThreads = threadGroup.activeCount();
 		if(activeThreads == 0){

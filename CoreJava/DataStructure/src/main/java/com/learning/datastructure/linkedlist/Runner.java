@@ -1,6 +1,5 @@
 package com.learning.datastructure.linkedlist;
 
-import org.apache.log4j.BasicConfigurator;
 
 /**
  * Main Class to demonstrate CustomLinkedList Class
@@ -10,8 +9,7 @@ import org.apache.log4j.BasicConfigurator;
 public class Runner {
 
 	public static void main(String[] args) {
-		BasicConfigurator.configure();
-		
+
 		CustomLinkedList customLinkedList = new CustomLinkedList();
         customLinkedList.insertAtLast(1);
         customLinkedList.insertAtLast(2);
