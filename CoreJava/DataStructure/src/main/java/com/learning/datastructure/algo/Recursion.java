@@ -4,7 +4,7 @@ public class Recursion {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1,2,3,4,5,6,8,9};
-        System.out.println(binarySearchWithAlgo(0,arr.length-1,arr,6));
+        System.out.println(binarySearchWithAlgo(0,arr.length-1,arr,7));
     }
 
     public static  int binarySearchWithAlgo(int l, int h, int[] arr , int key) {
